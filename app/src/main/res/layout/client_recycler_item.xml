@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp"
+    android:id="@+id/client_item"
+    app:cardBackgroundColor="@color/light_black">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/beginsession"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/baseline_play_circle_24"
+            android:paddingTop="5dp"
+            android:layout_marginTop="12dp"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/white"
+            />
+
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="80dp"
+            android:background="@drawable/border4"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+
+            android:layout_marginRight="1dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/rec_client_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Client Name"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:paddingLeft="18dp"
+                android:paddingTop="18dp"
+                android:paddingRight="18dp"
+
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/rec_client_workout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Workout Name"
+                android:textColor="@color/red"
+                android:textSize="18sp"
+                android:paddingLeft="18dp"
+                android:paddingBottom="18dp"
+                android:paddingRight="18dp"
+
+
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

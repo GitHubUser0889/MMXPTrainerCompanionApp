@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClientBeginSession"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+
+        <TextView
+
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:textColor="@color/white"
+            android:text="BEGIN SESSION"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:hint="Title of Your Workout"
+            android:padding="8dp"
+            />
+
+        <EditText
+            android:id="@+id/bgsworkoutTitle"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:background="@drawable/border_8_light_black_radius"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:hint="Title of Your Workout"
+            android:padding="8dp"
+            />
+
+
+
+
+
+    <EditText
+        android:id="@+id/bgsworkoutInstr"
+        android:layout_width="350dp"
+        android:layout_height="550dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:background="@drawable/border_8_light_black_radius"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:hint="Set Instructions Here..."
+        android:gravity="center"
+        android:padding="8dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/SaveSession"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border2"
+                android:padding="8dp"
+                android:text="FINISH"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/CancelSession"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/border6"
+                android:padding="8dp"
+                android:text="Cancel"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

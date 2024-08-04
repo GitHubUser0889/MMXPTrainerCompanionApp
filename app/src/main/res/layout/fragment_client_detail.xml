@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddClient"
+    android:fillViewport="true"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border1"
+            android:id="@+id/view_clientname"
+            android:layout_gravity="center"
+            android:hint="Enter Name"
+            android:padding="8dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <EditText
+                android:id="@+id/view_clientage"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:background="@drawable/border1"
+                android:hint="Age"
+                android:gravity="center"
+                android:padding="8dp"
+                />
+
+            <EditText
+                android:id="@+id/view_clientweight"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:background="@drawable/border1"
+                android:hint="Weight"
+                android:layout_marginLeft="40dp"
+                android:gravity="center"
+                android:padding="8dp"
+                />
+
+            <EditText
+                android:id="@+id/view_clientheight"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:background="@drawable/border1"
+                android:hint="Height"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:padding="8dp"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <EditText
+                android:id="@+id/view_clientgender"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:background="@drawable/border1"
+                android:padding="8dp"
+
+                />
+
+            <EditText
+                android:id="@+id/view_clientcontact"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/border1"
+                android:inputType="number"
+                android:padding="8dp"
+                android:hint="Contact No."
+                />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/view_clientworkout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border1"
+            android:padding="8dp"
+            />
+
+        <EditText
+            android:id="@+id/view_clientguideline"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border1"
+            android:padding="8dp"
+            />
+
+        <ProgressBar
+            android:id="@+id/view_SessionCounter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:indeterminateTint="@color/red"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+        <EditText
+            android:id="@+id/view_clientnotes"
+            android:layout_width="350dp"
+            android:layout_height="250dp"
+            android:background="@drawable/border1"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:hint="Client Notes"
+            android:gravity="center"
+            android:padding="8dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border2"
+                android:padding="8dp"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:id="@+id/view_clientsave"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/view_clientcancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/border6"
+                android:padding="8dp"
+                android:text="Cancel"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

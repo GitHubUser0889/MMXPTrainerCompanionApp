@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "968604021521",
+    "project_id": "trainercompanionapp2",
+    "storage_bucket": "trainercompanionapp2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:968604021521:android:e9d98632ca8ee4d9df92b0",
+        "android_client_info": {
+          "package_name": "com.example.trainercompanionapp2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBR1dNbn9dIjtUQvVpeNn1PJyNsLl2Yu2U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

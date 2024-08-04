@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/workoutprogram"
+        android:title="Workout"
+        android:icon="@drawable/ic_baseline_workout_vector_2"
+        />
+
+
+    <item
+        android:id="@+id/clientlist"
+        android:title="Clients"
+        android:icon="@drawable/ic_baseline_clients"
+        />
+    <item
+        android:id="@+id/dasboardview"
+        android:title="Dashboard"
+        android:icon="@drawable/ic_baseline_dashbord"
+        />
+
+    <item
+        android:id="@+id/Guidelineslist"
+        android:title="Guidelines"
+        android:icon="@drawable/ic_baseline_guideline"/>
+
+    <item
+        android:id="@+id/Equipmentlist"
+        android:title="Equipment"
+        android:icon="@drawable/ic_baseline_equipment"/>
+
+
+
+
+
+
+
+
+
+</menu>

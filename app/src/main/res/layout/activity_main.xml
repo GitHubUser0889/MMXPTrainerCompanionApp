@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/fragmentTitle"
+            android:layout_width="227dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+
+            android:text="DASHBOARD"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/Dashboard"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/border4"
+            android:drawableTop="@drawable/ic_baseline_dashbord"
+            android:paddingTop="5dp"
+            android:text="Dashboard"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+
+
+            />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/border4"
+            android:drawableTop="@drawable/ic_baseline_settings"
+            android:paddingTop="5dp"
+            android:text="Settings"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+
+
+            />
+
+
+    </LinearLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/mainframe"
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="6dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/Workout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border4"
+            android:drawableTop="@drawable/ic_baseline_workout_vector_2"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Workout"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:layout_marginBottom="10dp"
+
+            />
+
+        <Button
+            android:id="@+id/Guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border4"
+            android:drawableTop="@drawable/ic_baseline_guideline"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Guidelines"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:layout_marginBottom="10dp"
+
+
+            />
+
+        <Button
+            android:id="@+id/Client"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border4"
+            android:drawableTop="@drawable/ic_baseline_clients"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Clients"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:layout_marginBottom="10dp"
+
+            />
+
+        <Button
+            android:id="@+id/Schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/border4"
+            android:drawableTop="@drawable/ic_baseline_calendar"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Schedule"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:layout_marginBottom="10dp"
+
+            />
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
