@@ -8,11 +8,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -22,6 +24,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import org.w3c.dom.Text;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class ClientBeginSession extends Fragment {
@@ -38,6 +45,11 @@ public class ClientBeginSession extends Fragment {
     FirebaseAuth mAuth;
     DatabaseReference databaseReference;
     String userID;
+    long startTimeInMillis = 0;
+    long timeElapsed = 0;
+    boolean timerRunning = false;
+    CountDownTimer countDownTimer;
+    TextView timerView;
 
 
     public ClientBeginSession() {
@@ -73,6 +85,10 @@ public class ClientBeginSession extends Fragment {
 
         EditText bgsTitle, bgsInstr;
         Button bgsSave, bgsCancel;
+        TextView bgsclientName;
+
+      
+       
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_client_begin_session, container, false);
@@ -80,17 +96,28 @@ public class ClientBeginSession extends Fragment {
         bgsTitle = view.findViewById(R.id.bgsworkoutTitle);
         bgsInstr = view.findViewById(R.id.bgsworkoutInstr);
         bgsSave = view.findViewById(R.id.SaveSession);
+        timerView = view.findViewById(R.id.timer);
+        bgsclientName = view.findViewById(R.id.bgsclientName);
         bgsTitle.setText(mParam1);
         bgsInstr.setText(mParam2);
+        bgsclientName.setText(mParam3);
+       
+
+        if (!timerRunning){
+            startTimer();
+        }
+
 
         bgsSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 saveSession();
+                stopTimer();
             }
         });
         return view;
     }
+
 
     private void saveSession() {
         mAuth = FirebaseAuth.getInstance();
@@ -124,15 +151,45 @@ public class ClientBeginSession extends Fragment {
                 }
             });
         }
-
-
-
     }
-
     private void gobacktoFragment(Fragment fragment) {
         FragmentManager fragmentManager = getParentFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.mainframe, fragment);
         fragmentTransaction.commit();
     }
+
+    private void stopTimer() {
+        if (countDownTimer != null) {
+            countDownTimer.cancel();
+            timerRunning = false;
+        }
+    }
+
+    private void startTimer() {
+        startTimeInMillis = System.currentTimeMillis();
+        countDownTimer = new CountDownTimer(Long.MAX_VALUE, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                timeElapsed = System.currentTimeMillis() - startTimeInMillis;
+                updateTimerText();
+            }
+
+            @Override
+            public void onFinish() {
+                timerRunning = false;
+            }
+        }.start();
+        timerRunning = true;
+    }
+
+    private void updateTimerText() {
+        int hours = (int) (timeElapsed / (1000 * 60 * 60)) % 24;
+        int minutes = (int) (timeElapsed / (1000 * 60)) % 60;
+        int seconds = (int) (timeElapsed / 1000) % 60;
+
+        String timeFormatted = String.format("%02d:%02d:%02d", hours, minutes, seconds);
+        timerView.setText(timeFormatted);
+    }
+
 }

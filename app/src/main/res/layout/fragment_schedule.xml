@@ -22,21 +22,115 @@
             android:dateTextAppearance="@style/CalenderViewDateCustomText"
             android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"/>
 
-        <Button
-            android:id="@+id/AddSchedule"
-            android:layout_width="wrap_content"
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add A Schedule"
-            android:textColor="@color/white"
-            android:background="@drawable/border2"
+            android:layout_marginLeft="26dp"
+            >
+
+            <EditText
+                android:id="@+id/month"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:background="@drawable/border1"
+                android:hint="Month"
+                android:gravity="center"
+                android:padding="8dp"
+                />
+
+
+
+            <EditText
+                android:id="@+id/day"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/border1"
+                android:hint="Day"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:padding="8dp"
+                />
+
+            <EditText
+                android:id="@+id/year"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:background="@drawable/border1"
+                android:layout_marginLeft="5dp"
+                android:hint="Year"
+                android:gravity="center"
+                android:padding="8dp"
+                />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/scheduleclient"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border1"
             android:padding="8dp"
-            android:layout_marginTop="30dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="150dp"
+
+            />
+
+        <EditText
+            android:id="@+id/scheduleworkout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border1"
+            android:padding="8dp"
             />
 
 
+        <TextView
+            android:id="@+id/texttime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="38sp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="25dp"/>
+
+        <Button
+            android:id="@+id/setTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SET A TIME"
+            android:textColor="@color/white"
+            android:background="@drawable/add_clickable_effect"
+            android:padding="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            />
+
+
+
+        <Button
+            android:id="@+id/AddSchedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add A Schedule"
+            android:textColor="@color/white"
+            android:background="@drawable/add_clickable_effect"
+            android:padding="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            />
+
     </LinearLayout>
+
+
 
 
 

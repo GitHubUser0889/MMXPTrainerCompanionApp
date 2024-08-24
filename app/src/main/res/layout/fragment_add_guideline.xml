@@ -20,7 +20,7 @@
             android:layout_width="350dp"
             android:layout_height="60dp"
             android:background="@drawable/border1"
-            android:layout_marginTop="50dp"
+
             android:layout_gravity="center"
             android:hint="Title of Your Guideline"
             android:padding="8dp"/>
@@ -47,7 +47,7 @@
                 android:id="@+id/SaveGuideline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/border2"
+                android:background="@drawable/add_clickable_effect"
                 android:padding="8dp"
                 android:text="Save"
                 android:textColor="@color/white"

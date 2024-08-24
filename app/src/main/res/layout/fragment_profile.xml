@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Profile"
+    android:background="@color/black">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="100dp">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/trainericonfinal"
+                    />
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:id="@+id/view_trainername"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="Trainer Name"
+            android:textSize="22sp"
+            android:padding="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border_8_light_black_radius"
+            android:gravity="center"
+            android:id="@+id/view_traineremail"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="Email"
+            android:textSize="22sp"
+            android:padding="8dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border_8_light_black_radius"
+            android:gravity="center"
+            android:id="@+id/view_trainercontact"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="Contact Number"
+            android:textSize="22sp"
+            android:padding="8dp"
+            android:layout_marginTop="20dp"/>
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:background="@drawable/mmxp_logo"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
+
+
+
+
+
+        <Button
+            android:id="@+id/reportequipment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Report Equipment"
+            android:textColor="@color/white"
+            android:background="@drawable/border2"
+            android:padding="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <Button
+            android:id="@+id/viewreport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Monitor Equipment"
+            android:textColor="@color/white"
+            android:background="@drawable/border2"
+            android:padding="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+    </LinearLayout>
+
+</ScrollView>

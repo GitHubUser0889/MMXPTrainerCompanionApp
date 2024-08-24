@@ -116,7 +116,7 @@ public class ClientDetailFragment extends Fragment {
 
         int progresscounter = Integer.parseInt(mParam9);
         cdfview_SessionCounter.setProgress(progresscounter + 10);
-        cdfview_SessionCounter.setProgressTintList(ColorStateList.valueOf(Color.RED));
+        cdfview_SessionCounter.setMax(100);
 
 
         return view;

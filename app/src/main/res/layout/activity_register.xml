@@ -83,7 +83,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
-        android:background="@drawable/border5"
+        android:background="@drawable/add_clickable_effect"
         android:text="Register"
         android:textSize="18sp"
         android:textStyle="bold"

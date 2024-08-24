@@ -71,7 +71,7 @@
         android:layout_marginTop="90dp"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
-        android:background="@drawable/border5"
+        android:background="@drawable/login_click_effect"
         android:text="Log In"
         android:textSize="18sp"
         android:textStyle="bold"

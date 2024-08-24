@@ -12,15 +12,28 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/user_profile"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"/>
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:background="@drawable/border1"
+            android:background="@drawable/border_8_light_black_radius"
+            android:gravity="center"
             android:id="@+id/view_clientname"
             android:layout_gravity="center"
-            android:hint="Enter Name"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="Client Name"
+            android:textSize="22sp"
             android:padding="8dp"/>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -33,8 +46,9 @@
                 android:id="@+id/view_clientage"
                 android:layout_width="100dp"
                 android:layout_height="60dp"
-                android:background="@drawable/border1"
-                android:hint="Age"
+                android:background="@drawable/border_8_light_black_radius"
+                android:textColor="@color/white"
+                android:textStyle="bold"
                 android:gravity="center"
                 android:padding="8dp"
                 />
@@ -43,8 +57,9 @@
                 android:id="@+id/view_clientweight"
                 android:layout_width="120dp"
                 android:layout_height="60dp"
-                android:background="@drawable/border1"
-                android:hint="Weight"
+                android:background="@drawable/border_8_light_black_radius"
+                android:textColor="@color/white"
+                android:textStyle="bold"
                 android:layout_marginLeft="40dp"
                 android:gravity="center"
                 android:padding="8dp"
@@ -54,8 +69,9 @@
                 android:id="@+id/view_clientheight"
                 android:layout_width="120dp"
                 android:layout_height="60dp"
-                android:background="@drawable/border1"
-                android:hint="Height"
+                android:background="@drawable/border_8_light_black_radius"
+                android:textColor="@color/white"
+                android:textStyle="bold"
                 android:layout_marginLeft="10dp"
                 android:gravity="center"
                 android:padding="8dp"
@@ -75,7 +91,9 @@
                 android:id="@+id/view_clientgender"
                 android:layout_width="100dp"
                 android:layout_height="60dp"
-                android:background="@drawable/border1"
+                android:background="@drawable/border_8_light_black_radius"
+                android:textColor="@color/white"
+                android:textStyle="bold"
                 android:padding="8dp"
 
                 />
@@ -85,10 +103,12 @@
                 android:layout_width="250dp"
                 android:layout_height="60dp"
                 android:layout_marginLeft="40dp"
-                android:background="@drawable/border1"
+                android:background="@drawable/border_8_light_black_radius"
+                android:textColor="@color/white"
+                android:textStyle="bold"
                 android:inputType="number"
                 android:padding="8dp"
-                android:hint="Contact No."
+
                 />
         </LinearLayout>
 
@@ -99,7 +119,9 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:background="@drawable/border1"
+            android:background="@drawable/border_8_light_black_radius"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             android:padding="8dp"
             />
 
@@ -110,7 +132,9 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:background="@drawable/border1"
+            android:background="@drawable/border_8_light_black_radius"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             android:padding="8dp"
             />
 
@@ -121,17 +145,18 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="20dp"
-            android:indeterminateTint="@color/red"
-            style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/client_progress"/>
 
         <EditText
             android:id="@+id/view_clientnotes"
             android:layout_width="350dp"
             android:layout_height="250dp"
-            android:background="@drawable/border1"
             android:layout_marginTop="20dp"
             android:layout_gravity="center"
-            android:hint="Client Notes"
+            android:background="@drawable/border_8_light_black_radius"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             android:gravity="center"
             android:padding="8dp"/>
 

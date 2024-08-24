@@ -1,13 +1,19 @@
 package com.example.trainercompanionapp2;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -17,7 +23,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button cdWorkout, cdClient, cdGuideline, cdSchedule, cdDashboard;
+    private static final int NOTIFICATION_PERMISSION_REQUEST_CODE = 101;
+    Button cdWorkout, cdClient, cdGuideline, cdSchedule, cdDashboard, cdProfile;
     TextView cdffragmentTitle;
 
     @SuppressLint("MissingInflatedId")
@@ -31,12 +38,20 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.POST_NOTIFICATIONS}, NOTIFICATION_PERMISSION_REQUEST_CODE);
+            }
+        }
+
         cdDashboard = findViewById(R.id.Dashboard);
         cdWorkout = findViewById(R.id.Workout);
         cdClient = findViewById(R.id.Client);
         cdGuideline = findViewById(R.id.Guideline);
         cdSchedule = findViewById(R.id.Schedule);
         cdffragmentTitle = findViewById(R.id.fragmentTitle);
+        cdProfile = findViewById(R.id.Profile);
 
         startFragment(new Dashboard());
         cdffragmentTitle.setText("DASHBOARD");
@@ -82,6 +97,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        cdProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startFragment(new Profile());
+                cdffragmentTitle.setText("TRAINER");
+            }
+        });
+
+
     }
 
     private void startFragment(Fragment fragment) {
@@ -91,4 +115,20 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
 
     }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == NOTIFICATION_PERMISSION_REQUEST_CODE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Permission granted
+                // You can now show notifications
+            } else {
+                // Permission denied
+                // Handle the case when permission is denied
+            }
+        }
+    }
 }
+
+

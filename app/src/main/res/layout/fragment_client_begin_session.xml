@@ -12,14 +12,11 @@
         android:orientation="vertical">
 
 
-
-
         <TextView
-
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:textColor="@color/white"
-            android:text="BEGIN SESSION"
+            android:text="ONGOING SESSION"
             android:gravity="center"
             android:textStyle="bold"
             android:textSize="30sp"
@@ -28,11 +25,42 @@
             android:padding="8dp"
             />
 
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:textColor="@color/red"
+            android:text="00:00:00"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:hint="Title of Your Workout"
+            android:padding="8dp"
+            />
+
+
+        <TextView
+            android:id="@+id/bgsclientName"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColorHint="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:hint="Client Name"
+            android:padding="8dp"
+            />
         <EditText
             android:id="@+id/bgsworkoutTitle"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:textColor="@color/white"
+            android:textStyle="bold"
             android:textColorHint="@color/white"
             android:background="@drawable/border_8_light_black_radius"
             android:layout_gravity="center"
